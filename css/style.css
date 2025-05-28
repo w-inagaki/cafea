@@ -1,0 +1,330 @@
+/* タイトルのフォントfont-family: "Inria Sans", sans-serif; */
+html{
+    color: #150A02;
+    background-color: #F5F4F2;
+    font-size: 1rem;
+    font-family: "Noto Sans JP", sans-serif;
+}
+.sp-br{
+    display: none;
+}
+@media (max-width: 768px) {
+    .sp-br{
+        display: block;
+    }
+    .pc-br{
+        display: none;
+    }
+}
+
+/* ヘッダー
+------------------------------------------------------------ */
+.header{
+    position: fixed;
+    width: 100%;
+    background-color: #F5F4F2;
+    box-shadow: 0 2px 8px rgba(21, 10, 2, 0.1);
+    z-index: 999;
+}
+.pc-header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+.pc-nav-ul{
+    display: flex;
+    gap: 30px;
+}
+.sp-nav{
+    display: none;
+}
+
+/* ハンバーガーメニュー */
+.hamburger{
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    background-color: #FFE7D5;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    position: relative;
+    top: 13px;
+    right: 10px;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #150A02;
+  display: block;
+}
+/* スマホ用メニュー */
+.sp-nav {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 231, 213, 0.8);
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+}
+.nav-sp ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.nav-sp li {
+  margin: 20px 0;
+}
+.nav-sp a {
+  text-decoration: none;
+  color: #333;
+  font-size: 24px;
+}
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+/* ヘッダースマホ用レスポンシブ */
+@media (max-width: 768px) {
+    .header{
+        box-shadow: 0 2px 8px rgba(21, 10, 2, 0);
+        background-color: initial;
+        margin-top: 0;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .pc-header{
+        display: none;
+    }
+}
+
+
+/* トップ
+------------------------------------------------------------ */
+.mainvisual-pc{
+    margin-top: 50px;
+    width: 100vw;
+    height: auto;
+}
+.mainvisual-sp{
+    display: none;
+}
+.top-message{
+    padding: 0 5%;
+}
+.top-message-inner{
+    background-color: #F5F4F2;
+    border: 1px solid #B4ACA5;
+    border-radius: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: -100px;
+    position: relative;
+    z-index: 1;
+}
+.top-message-left{
+    padding: 30px 5px;
+}
+.top-message-left-ttl{
+    font-family: "Inria Sans", sans-serif; 
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.top-message-left-txt{
+    margin-bottom: 20px;
+}
+.top-message-left-btn{
+    background-color: #E38B41;
+    color: #F5F4F2;
+    border-radius: 20px;
+    padding: 10px 30px;
+}
+.top-message-left-btn:hover{
+    background-color: #fcbf8d;
+    transition: 0.5s;
+}
+.top-message-right{
+  border-left: 1px solid #B4ACA5;
+  padding: 30px 10px 0 50px;
+}
+.top-message-right-ttl{
+    font-family: "Inria Sans", sans-serif; 
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.top-message-right-txt{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* トップスマホ用レスポンシブ */
+@media (max-width: 768px) {
+    .mainvisual-pc{
+    display: none;
+    }
+    .mainvisual-sp{
+        display: block;
+        width: 100vw;
+        height: auto;
+    }
+    .top-message-inner{
+        background-color: initial;
+        border: initial;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+    }
+    .top-message-left{
+        padding-top: 50px;
+        text-align: center;
+    }
+    .top-message-left-ttl{
+        margin-bottom: 20px;
+    }
+    .top-message-left-txt{
+        margin-bottom: 30px;
+    }
+    .top-message-right{
+    border-left: initial;
+    padding: 50px 0 40px;
+    text-align: center;
+    }
+    .top-message-right-ttl{
+        margin-bottom: 30px;
+    }
+}
+
+/* Cafeaについて
+------------------------------------------------------------ */
+.about{
+    padding-top: 110px;
+}
+.about-inner{
+    max-width: 900px;
+    padding: 0 5%;
+    margin: 0 auto;
+    display: flex;
+    gap: 90px;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-img{
+    max-width: 240px;
+}
+.about-txt-ttl{
+    font-family: "Inria Sans", sans-serif; 
+    font-size: 64px;
+    margin-bottom: 10px;
+}
+
+/* Cafeaについてスマホ用レスポンシブ */
+@media (max-width: 768px) {
+    .about{
+        display: none;
+    }
+}
+
+/* 4つのこだわり
+------------------------------------------------------------ */
+.point{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 120px 5%;
+}
+.point-box{
+    text-align: center;
+}
+.icon-wrap{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 40px;
+}
+.point-box-ttl{
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+/* 4つのこだわりスマホ用レスポンシブ */
+@media (max-width: 768px) {
+    .point{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 50px 5% 0;
+    }
+    .point-box{
+        text-align: center;
+        width: 45%;
+        margin-bottom: 20px;
+    }
+    .icon-wrap{
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 40px;
+    }
+    .point-box-ttl{
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+}
+
+/* 3枚の写真
+------------------------------------------------------------ */
+.photo{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    gap: 30px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+.photo-box{
+    text-align: center;
+}
+.photo-box-img{
+    max-width: 100%;
+}
+.photo-box-ttl{
+    font-family: "Inria Sans", sans-serif;
+    font-size: 1.6rem;
+    margin-top: 10px;
+}
+
+
+
+/* メニュー
+------------------------------------------------------------ */
+.menu{
+    padding-top: 120px;
+}
