@@ -19,17 +19,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="pc-header">
             <div class="header-logo">Cafea</div><!-- /.header-logo -->
             <nav class="pc-nav">
                 <ul class="pc-nav-ul">
                     <li class="pc-nav-list"><a href="#">HOME</a></li>
-                    <li class="pc-nav-list"><a href="#">ABOUT</a></li>
-                    <li class="pc-nav-list"><a href="#">MENU</a></li>
-                    <li class="pc-nav-list"><a href="#">RESERVATION</a></li>
-                    <li class="pc-nav-list"><a href="#">NEWS</a></li>
-                    <li class="pc-nav-list"><a href="#">ACCESS</a></li>
+                    <li class="pc-nav-list"><a href="#about">ABOUT</a></li>
+                    <li class="pc-nav-list"><a href="#menu">MENU</a></li>
+                    <li class="pc-nav-list"><a href="#reservation">RESERVATION</a></li>
+                    <li class="pc-nav-list"><a href="#news">NEWS</a></li>
+                    <li class="pc-nav-list"><a href="#access">ACCESS</a></li>
                 </ul><!-- /.pc-nav-ul -->
             </nav><!-- /.pc-nav -->
         </div><!-- /.pc-header -->
@@ -51,9 +51,9 @@
         </div><!-- /.sp-nav -->
     </header><!-- /.header -->
 
-    <section class="top">
-        <img src="./images/mainvisual-pc.png" alt="Cafeaの内装写真" class="mainvisual-pc">
-        <img src="./images/mainvisual-sp.png" alt="Cafeaの内装写真" class="mainvisual-sp">
+    <section class="top" id="top">
+        <img src="./images/mainvisual-pc.jpg" alt="Cafeaの内装写真" class="mainvisual-pc">
+        <img src="./images/mainvisual-sp.jpg" alt="Cafeaの内装写真" class="mainvisual-sp">
         <div class="top-message">
             <div class="top-message-inner">
                 <div class="top-message-left">
@@ -72,9 +72,9 @@
         </div><!-- /.top-message -->
     </section><!-- /.top -->
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="about-inner">
-            <img src="./images/aboutus-icon.png" alt="" class="about-img">
+            <img src="./images/aboutus-icon.jpg" alt="" class="about-img">
             <div class="about-txt">
                 <h2 class="about-txt-ttl">ABOUT US</h2>
                 <p class="about-txt-txt">Cafeaへようこそ。<br>心地よい空間と美味しいコーヒーで、あなたにぴったりの時間をお届けします。<br>こだわりの豆と丁寧な抽出で、どなたにも愛される味を追求しています。</p><!-- /.about-txt-txt -->
@@ -82,7 +82,7 @@
         </div><!-- /.about-inner -->
     </section><!-- /.about -->
 
-    <section class="point">
+    <section class="point" id="point">
         <div class="point-box">
             <div class="icon-wrap">
                 <img src="./images/coffee-icon.png" alt="コーヒー豆のイラスト" class="point-box-img">
@@ -113,24 +113,201 @@
         </div><!-- /.point-box -->
     </section><!-- /.point -->
 
-    <section class="photo">
-        <div class="photo-box">
-            <img src="./images/coffee-series.png" alt="コーヒーの写真" class="photo-box-img">
-            <h3 class="photo-box-ttl">COFFEE SLECTION</h3>
-        </div><!-- /.photo-box -->
-        <div class="photo-box">
-            <img src="./images/tea-series.png" alt="紅茶の写真" class="photo-box-img">
-            <h3 class="photo-box-ttl">TEA SELECTION</h3>
-        </div><!-- /.photo-box -->
-        <div class="photo-box">
-            <img src="./images/pastries.png" alt="スイーツの写真" class="photo-box-img">
-            <h3 class="photo-box-ttl">PASTRIES</h3>
-        </div><!-- /.photo-box -->
+    <section class="photo" id="photo">
+        <div class="photo-slider">
+            <div class="photo-box active">
+                <img src="./images/coffee-series.jpg" alt="コーヒーの写真" class="photo-box-img">
+                <h3 class="photo-box-ttl">COFFEE SLECTION</h3>
+            </div><!-- /.photo-box -->
+            <div class="photo-box">
+                <img src="./images/tea-series.jpg" alt="紅茶の写真" class="photo-box-img">
+                <h3 class="photo-box-ttl">TEA SELECTION</h3>
+            </div><!-- /.photo-box -->
+            <div class="photo-box">
+                <img src="./images/pastries.jpg" alt="スイーツの写真" class="photo-box-img">
+                <h3 class="photo-box-ttl">PASTRIES</h3>
+            </div><!-- /.photo-box -->
+        </div><!-- /.photo-slider -->
     </section><!-- /.photo -->
 
-    <section class="menu">
-        
+    <section class="menu" id="menu">
+        <h2 class="menu-ttl">MENU</h2>
+        <div class="menu-inner">
+            <div class="menu-inner-left">
+                <div class="menu-section">
+                    <h3 class="menu-section-ttl menu-toggle">COFFEE SELECTION</h3>
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">エスプレッソ</li>
+                        <li class="menu-section-list-txt">香り高く濃厚なショットのコーヒー</li>
+                    </ul><!-- /.menu-section-list -->
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">アメリカーノ</li>
+                        <li class="menu-section-list-txt">エスプレッソにお湯を加えたすっきりとした味わい</li>
+                    </ul><!-- /.menu-section-list -->
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">カプチーノ</li>
+                        <li class="menu-section-list-txt">エスプレッソ＋スチームミルク＋フォームミルクを同量で</li>
+                    </ul><!-- /.menu-section-list -->
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">カフェラテ</li>
+                        <li class="menu-section-list-txt">スチームミルクをたっぷり加えたクリーミーな味わい</li>
+                    </ul><!-- /.menu-section-list -->
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">カフェモカ</li>
+                        <li class="menu-section-list-txt"> チョコの甘さとコーヒーの苦味が調和した人気ドリンク</li>
+                    </ul><!-- /.menu-section-list -->
+                </div><!-- /.menu-section -->
+
+                <div class="menu-section">
+                    <h3 class="menu-section-ttl menu-toggle">SPECIALTY DRINKS</h3>
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">バニララテ</li>
+                        <li class="menu-section-list-txt">バニラの香りがふわっと広がる甘めのラテ</li>
+                    </ul><!-- /.menu-section-list -->
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">キャラメルマキアート</li>
+                        <li class="menu-section-list-txt">キャラメルソースとスチームミルクが香る贅沢な一杯</li>
+                    </ul><!-- /.menu-section-list -->
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">抹茶ラテ</li>
+                        <li class="menu-section-list-txt">濃厚な抹茶とミルクの風味が楽しめる和風ラテ</li>
+                    </ul><!-- /.menu-section-list -->
+                </div><!-- /.menu-section -->
+
+                <div class="menu-section">
+                    <h3 class="menu-section-ttl menu-toggle">TEA SELECTION</h3>
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">アールグレイ</li>
+                        <li class="menu-section-list-txt">ベルガモットが香る爽やかで気品ある<br class="sp-br">フレーバーティー</li>
+                    </ul><!-- /.menu-section-list -->
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">ダージリン</li>
+                        <li class="menu-section-list-txt">軽やかな渋みと華やかな香りが特徴</li>
+                    </ul><!-- /.menu-section-list -->
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">アップルシナモンティー</li>
+                        <li class="menu-section-list-txt">りんごの甘みとシナモンのスパイスが香る<br>秋冬に人気のフレーバー</li>
+                    </ul><!-- /.menu-section-list -->
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">シトラスティー</li>
+                        <li class="menu-section-list-txt">オレンジやレモンなど<br class="sp-br">柑橘系フルーツの香りが広がる<br class="pc-br">すっきりとしたフレーバーティー</li>
+                    </ul><!-- /.menu-section-list -->
+                </div><!-- /.menu-section -->
+            </div><!-- /.menu-inner-left -->
+
+            <div class="menu-inner-right">
+                <div class="menu-section">
+                    <h3 class="menu-section-ttl menu-toggle">PASTRIES</h3>
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">マフィン</li>
+                        <li class="menu-section-list-txt">ふんわり焼き上げた朝食にぴったりのマフィン</li>
+                    </ul><!-- /.menu-section-list -->
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">シナモンロール</li>
+                        <li class="menu-section-list-txt">シナモンとアイシングが香る甘い定番スイーツ</li>
+                    </ul><!-- /.menu-section-list -->
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">デニッシュ</li>
+                        <li class="menu-section-list-txt">フィリングたっぷりの軽やかなデニッシュ</li>
+                    </ul><!-- /.menu-section-list -->
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">スコーン</li>
+                        <li class="menu-section-list-txt">ほんのり甘くてサクッとしたビスケット風の焼き菓子</li>
+                    </ul><!-- /.menu-section-list -->
+                </div><!-- /.menu-section -->
+
+                <div class="menu-section">
+                    <h3 class="menu-section-ttl menu-toggle">SNACKS</h3>
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">ベーグル（クリームチーズ付き）</li>
+                        <li class="menu-section-list-txt">クリームチーズをたっぷり塗った<br class="sp-br">もちもちのベーグル</li>
+                    </ul><!-- /.menu-section-list -->
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">グラノーラバー</li>
+                        <li class="menu-section-list-txt">エネルギーチャージにぴったりの<br class="sp-br">グラノーラバー</li>
+                    </ul><!-- /.menu-section-list -->
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">フルーツカップ</li>
+                        <li class="menu-section-list-txt">季節のフルーツを盛り込んだ<br class="sp-br">彩りフルーツカップ</li>
+                    </ul><!-- /.menu-section-list -->
+                </div><!-- /.menu-section -->
+
+                <div class="menu-section">
+                    <h3 class="menu-section-ttl menu-toggle">EXTRAS</h3>
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">エスプレッソ追加</li>
+                        <li class="menu-section-list-txt">エスプレッソの追加ショット<br class="sp-br">（苦味とコクUP）</li>
+                    </ul><!-- /.menu-section-list -->
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">フレーバーシロップ<br class="sp-br">（バニラ・キャラメル・モカ）</li>
+                        <li class="menu-section-list-txt">お好みのフレーバーシロップで<br class="sp-br">自分好みにカスタマイズ</li>
+                    </ul><!-- /.menu-section-list -->
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">植物性ミルク変更<br class="sp-br">（アーモンド・ソイ・オーツ）</li>
+                        <li class="menu-section-list-txt">アーモンド／ソイ／オーツの<br class="sp-br">植物性ミルクを選べます</li>
+                    </ul><!-- /.menu-section-list -->
+                    <ul class="menu-section-list">
+                        <li class="menu-section-list-ttl">チョコレートソース</li>
+                        <li class="menu-section-list-txt">とろけるチョコレートソースの<br class="sp-br">トッピング追加</li>
+                    </ul><!-- /.menu-section-list -->
+                </div><!-- /.menu-section -->
+            </div><!-- /.menu-inner-right -->
+
+        </div><!-- /.menu-inner -->
     </section><!-- /.menu -->
+
+    <section class="reservation" id="reservation">
+        <div class="reservation-inner">
+            <img src="./images/reservation.jpg" alt="店内の写真" class="reservation-img">
+            <div class="reservation-content">
+                <h2 class="reservation-ttl">RESERVATION</h2>
+                <p class="reservation-txt">ご予約は以下のフォームよりよろしくお願いします。</p>
+                <button class="reservation-btn"><a href="#">席を予約する</a></button>
+            </div><!-- /.reservation-content -->
+        </div><!-- /.reservation-inner -->
+    </section><!-- /.reservation -->
+
+    <section class="news" id="news">
+        <h2 class="news-ttl">NEWS ARTICLES</h2>
+        <div class="news-contents">
+            <div class="news-contents-item">
+                <img src="./images/news-img1.jpg" alt="〇〇の写真" class="news-contents-item-img">
+                <div class="news-contents-item-txt">
+                    <h3 class="news-contents-item-txt-ttl">ここにタイトルが入ります。</h3>
+                    <div class="news-contents-item-txt-txt">小見出しや内容が入ります。小見出しや内容が入ります。</div>
+                </div><!-- /.news-contents-item-txt -->
+            </div><!-- /.news-contents-item -->
+            <div class="news-contents-item">
+                <img src="./images/news-img2.jpg" alt="〇〇の写真" class="news-contents-item-img">
+                <div class="news-contents-item-txt">
+                    <h3 class="news-contents-item-txt-ttl">ここにタイトルが入ります。</h3>
+                    <div class="news-contents-item-txt-txt">小見出しや内容が入ります。小見出しや内容が入ります。</div>
+                </div><!-- /.news-contents-item-txt -->
+            </div><!-- /.news-contents-item -->
+            <div class="news-contents-item">
+                <img src="./images/news-img3.jpg" alt="〇〇の写真" class="news-contents-item-img">
+                <div class="news-contents-item-txt">
+                    <h3 class="news-contents-item-txt-ttl">ここにタイトルが入ります。</h3>
+                    <div class="news-contents-item-txt-txt">小見出しや内容が入ります。小見出しや内容が入ります。</div>
+                </div><!-- /.news-contents-item-txt -->
+            </div><!-- /.news-contents-item -->
+        </div><!-- /.news-contents -->
+        <button class="news-btn">もっと見る</button>
+    </section><!-- /.news -->
+
+    <section class="access" id="access">
+        <h2 class="access-ttl">ACCESS</h2>
+        <div class="access-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26000.69803163648!2d139.62538361549377!3d35.452634235938525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185cf885807149%3A0x94947dd82acc3d73!2z5qiq5rWc6LWk44Os44Oz44Ks5YCJ5bqr!5e0!3m2!1sja!2sjp!4v1748576659555!5m2!1sja!2sjp" width="600" height="450" style="border:0; margin-right: calc(50% - 50vw); margin-left: calc(50% - 50vw); max-width: none; width: 100vw" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div><!-- /.access-map -->
+        <div class="access-txt">
+            <p class="access-txt-info">神奈川県横浜市○○区○○　00-000</p>
+            <p class="access-txt-info">JR○○駅から徒歩10分<br>○○線○○駅から徒歩15分</p>
+            <p class="access-txt-info">駐車場はございません。公共交通機関をご利用ください。お車でお越しの方は、近隣のコインパーキングをご利用ください。</p>
+        </div><!-- /.access-txt -->
+    </section><!-- /.access -->
+
+<script src="./js/script.js" defer></script>
 
 </body>
 </html>

@@ -4,6 +4,7 @@ html{
     background-color: #F5F4F2;
     font-size: 1rem;
     font-family: "Noto Sans JP", sans-serif;
+    scroll-behavior: smooth;
 }
 .sp-br{
     display: none;
@@ -199,6 +200,7 @@ html{
     }
     .top-message-left-ttl{
         margin-bottom: 20px;
+        font-size: 40px;
     }
     .top-message-left-txt{
         margin-bottom: 30px;
@@ -210,6 +212,7 @@ html{
     }
     .top-message-right-ttl{
         margin-bottom: 30px;
+        font-size: 40px;
     }
 }
 
@@ -301,7 +304,7 @@ html{
 
 /* 3枚の写真
 ------------------------------------------------------------ */
-.photo{
+.photo-slider{
     display: flex;
     justify-content: space-between;
     max-width: 100%;
@@ -321,10 +324,326 @@ html{
     margin-top: 10px;
 }
 
+/* 3枚の写真スマホ用レスポンシブ */
+@media (max-width: 768px) {
+    .photo-slider {
+        position: relative;
+        height: auto;
+    }
+    .photo-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        transition: opacity 1s ease;
+        pointer-events: none;
+        padding: 0 5%;
+    }
+    .photo-box.active {
+        opacity: 1;
+        pointer-events: auto;
+        z-index: 1;
+    }
+}
+
+
 
 
 /* メニュー
 ------------------------------------------------------------ */
 .menu{
-    padding-top: 120px;
+    padding: 150px 5% 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.menu-inner{
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+}
+.menu-ttl{
+    font-family: "Inria Sans", sans-serif;
+    font-size: 64px;
+    margin-bottom: 60px;
+}
+.menu-section{
+    margin-bottom: 50px;
+}
+.menu-section-ttl{
+    font-family: "Inria Sans", sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+.menu-section-list{
+    margin-bottom: 10px;
+}
+.menu-section-list-ttl{
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* メニュースマホ用レスポンシブ */
+@media (max-width: 768px) {
+    .menu{
+        padding: 80px 5% 0;
+    }
+    .menu-inner{
+        display: flex;
+        flex-direction: column
+    }
+    .menu-ttl{
+        font-family: "Inria Sans", sans-serif;
+        font-size: 40px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .menu-section{
+        margin-bottom: 10px;
+    }
+    .menu-section-ttl{
+        font-family: "Inria Sans", sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+    .menu-section-list{
+        margin-bottom: 10px;
+        display: none;
+        padding-left: 20px;
+    }
+    .menu-section.open .menu-section-list {
+        display: block;
+    }
+    .menu-toggle {
+        position: relative;
+        cursor: pointer;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+    .menu-toggle::before {
+        content: "▼";
+        font-size: 14px;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        transition: transform 0.3s;
+    }
+    .menu-section.open .menu-toggle::before {
+        transform: rotate(180deg); /* 上向き矢印に変化 */
+    }
+    .menu-section-list-ttl{
+        font-size: 16px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    .menu-section-list-txt{
+        font-size: 14px;
+    }
+}
+
+
+/* 予約
+------------------------------------------------------------ */
+.reservation {
+    background-color: #ECEBE7;
+}
+.reservation-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.reservation-img {
+    max-width: 50%;
+    height: auto;
+}
+.reservation-content{
+    width: 45%;
+    text-align: left;
+    padding-right: 5%;
+}
+.reservation-ttl{
+    font-family: "Inria Sans", sans-serif;
+    font-size: 56px;
+    margin-bottom: 60px;
+}
+.reservation-txt{
+    margin-bottom: 80px;
+}
+.reservation-btn{
+    background-color: #E38B41;
+    color: #F5F4F2;
+    border-radius: 20px;
+    padding: 10px 30px;
+    max-width: 170px;
+    text-align: center;
+    margin: 0 auto;
+
+}
+.reservation-btn:hover{
+    background-color: #fcbf8d;
+    transition: 0.5s;
+}
+
+
+/* 予約スマホ用レスポンシブ */
+@media (max-width: 768px) {
+    .reservation {
+        padding-top: 70px;
+        background-color: initial;
+    }
+    .reservation-inner {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .reservation-img {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    .reservation-content {
+        width: 100%;
+        padding: 0 5%;
+        text-align: center;
+    }
+    .reservation-ttl{
+        font-family: "Inria Sans", sans-serif;
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    .reservation-txt{
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+/* ニュース
+------------------------------------------------------------ */
+.news{
+    padding-top: 240px;
+}
+.news-ttl{
+    font-family: "Inria Sans", sans-serif;
+    font-size: 64px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.news-contents{
+    max-width: 1100px;
+    padding: 0 5%;
+    margin: 0 auto;
+}
+.news-contents-item{
+    display: flex;
+
+    align-items: center;
+    border-top: 1px solid #B4ACA5;
+    padding: 10px 3%;
+}
+.news-contents-item:last-child{
+    border-bottom: 1px solid #B4ACA5;
+}
+.news-contents-item-txt{
+    margin-left: 5%;
+}
+.news-contents-item-txt-ttl{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.news-btn{
+    background-color: #E38B41;
+    color: #F5F4F2;
+    border-radius: 20px;
+    padding: 10px 30px;
+    max-width: 170px;
+    text-align: center;
+    display: flex;
+    margin: 100px auto 0;
+}
+.news-btn:hover{
+    background-color: #fcbf8d;
+    transition: 0.5s;
+}
+
+/* ニューススマホ用レスポンシブ */
+@media (max-width: 768px) {
+    .news{
+        padding-top: 70px;
+    }
+    .news-ttl{
+        font-family: "Inria Sans", sans-serif;
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .news-contents-item{
+        display: flex;
+        flex-direction: column;
+        border-top: initial;
+        padding: 0;
+        padding-bottom: 50px;
+    }
+    .news-contents-item:last-child{
+        border-bottom: initial;
+    }
+    .news-contents-item-txt{
+        margin-left: 0;
+    } 
+    .news-contents-item-img{
+        max-width: 300px;
+    }
+    .news-contents-item-txt{
+        max-width: 300px;
+    }
+    .news-contents-item-txt-ttl{
+        margin-top: 20px;
+    }
+    .news-btn{
+        margin: 0 auto;
+    }
+}
+
+
+/* ニュース
+------------------------------------------------------------ */
+.access{
+    padding-top: 200px;
+    margin-bottom: 150px;
+}
+.access-ttl{
+    font-family: "Inria Sans", sans-serif;
+    font-size: 64px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.access-txt{
+    max-width: 1100px;
+    margin: 20px auto 0;
+    padding: 0 5%;
+}
+.access-txt-info{
+    margin-bottom: 30px;
+    line-height: 1.6rem;
+}
+
+/* アクセススマホ用レスポンシブ */
+@media (max-width: 768px) {
+    .access{
+        padding-top: 80px;
+        margin-bottom: 50px;
+    }
+    .access-ttl{
+        font-family: "Inria Sans", sans-serif;
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .access-txt-info{
+        margin-bottom: 20px;
+        line-height: 1.6rem;
+    }
 }
