@@ -125,6 +125,7 @@ html{
 }
 .top-message{
     padding: 0 5%;
+    
 }
 .top-message-inner{
     background-color: #F5F4F2;
@@ -366,6 +367,7 @@ html{
     font-family: "Inria Sans", sans-serif;
     font-size: 64px;
     margin-bottom: 60px;
+    text-align: center;
 }
 .menu-section{
     margin-bottom: 50px;
@@ -519,96 +521,7 @@ html{
 }
 
 
-
-
-/* ニュース
------------------------------------------------------------- */
-.news{
-    padding-top: 240px;
-}
-.news-ttl{
-    font-family: "Inria Sans", sans-serif;
-    font-size: 64px;
-    text-align: center;
-    margin-bottom: 70px;
-}
-.news-contents{
-    max-width: 1100px;
-    padding: 0 5%;
-    margin: 0 auto;
-}
-.news-contents-item{
-    display: flex;
-
-    align-items: center;
-    border-top: 1px solid #B4ACA5;
-    padding: 10px 3%;
-}
-.news-contents-item:last-child{
-    border-bottom: 1px solid #B4ACA5;
-}
-.news-contents-item-txt{
-    margin-left: 5%;
-}
-.news-contents-item-txt-ttl{
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-.news-btn{
-    background-color: #E38B41;
-    color: #F5F4F2;
-    border-radius: 20px;
-    padding: 10px 30px;
-    max-width: 170px;
-    text-align: center;
-    display: flex;
-    margin: 100px auto 0;
-}
-.news-btn:hover{
-    background-color: #fcbf8d;
-    transition: 0.5s;
-}
-
-/* ニューススマホ用レスポンシブ */
-@media (max-width: 768px) {
-    .news{
-        padding-top: 70px;
-    }
-    .news-ttl{
-        font-family: "Inria Sans", sans-serif;
-        font-size: 40px;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    .news-contents-item{
-        display: flex;
-        flex-direction: column;
-        border-top: initial;
-        padding: 0;
-        padding-bottom: 50px;
-    }
-    .news-contents-item:last-child{
-        border-bottom: initial;
-    }
-    .news-contents-item-txt{
-        margin-left: 0;
-    } 
-    .news-contents-item-img{
-        max-width: 300px;
-    }
-    .news-contents-item-txt{
-        max-width: 300px;
-    }
-    .news-contents-item-txt-ttl{
-        margin-top: 20px;
-    }
-    .news-btn{
-        margin: 0 auto;
-    }
-}
-
-
-/* ニュース
+/* アクセス
 ------------------------------------------------------------ */
 .access{
     padding-top: 200px;
@@ -646,4 +559,13 @@ html{
         margin-bottom: 20px;
         line-height: 1.6rem;
     }
+}
+
+
+/* フッター
+------------------------------------------------------------ */
+.footer{
+    text-align: center;
+    padding: 12px 0;
+    border: 1px solid #B4ACA5;
 }
