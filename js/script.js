@@ -69,3 +69,28 @@ function handleResponsiveScript() {
 
 handleResponsiveScript();
 window.addEventListener('resize', handleResponsiveScript);
+
+
+
+// フォーム5人以上
+// ==================================================
+const people5plus = document.querySelector("#people5plus");
+const peopleCount = document.querySelector("#peopleCount");
+
+document.querySelectorAll('input[name="people"]').forEach(radio => {
+    radio.addEventListener("change", () => {
+
+        if (people5plus.checked) {
+            peopleCount.disabled = false;
+            peopleCount.required = true;
+        } else {
+            peopleCount.disabled = true;
+            peopleCount.required = false;
+            peopleCount.value = "";
+        }
+
+    });
+});
+
+// 初期状態
+peopleCount.disabled = true;

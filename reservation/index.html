@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafeaサイト</title>
+
+    <meta name="robots" content="noindex">
+
+    <link rel="stylesheet" href="../css/destyle.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!--本文 NotoSansJP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- タイトル Inria Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <script src="../js/script.js" defer></script>
+
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="hamburger">
+            <div class="header-logo">Cafea</div><!-- /.header-logo -->
+            <p class="btn-gNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </p>
+            <nav class="gNav">
+                <ul class="header-nav">
+                    <li class="header-nav-list"><a href="../index.html">HOME</a></li>
+                    <li class="header-nav-list"><a href="../#about">ABOUT</a></li>
+                    <li class="header-nav-list"><a href="../#menu">MENU</a></li>
+                    <li class="header-nav-list"><a href="#">RESERVATION</a></li>
+                    <li class="header-nav-list"><a href="../#access">ACCESS</a></li>
+                </ul><!-- /.header-nav -->
+            </nav>
+        </div><!-- /.hamburger -->
+    </header><!-- /#header .header -->
+    
+    <section class="reservationform">
+        <img src="../images/mainvisual-pc.jpg" alt="Cafeaの内装写真" class="mainvisual-pc">
+        <h2 class="reservationform-ttl">RESERVATION</h2><!-- /.reservationform-ttl -->
+        <h3 class="reservationform-subttl">予約フォーム</h3><!-- /.reservationform-subttl -->
+        <form class="reservationform-form">
+            <div class="reservationform-row">
+                <span class="reservationform-required">必須</span>
+                <label class="reservationform-label">人数</label>
+                <div class="reservationform-input-wrap">
+                    <label><input type="radio" name="people" required>1人</label>
+                    <label><input type="radio" name="people">2人</label>
+                    <label><input type="radio" name="people">3人</label>
+                    <label><input type="radio" name="people">4人</label>
+                    <label><input type="radio" name="people" value="5plus" id="people5plus">5人以上</label>
+                    <input type="text" class="reservationform-smallinput" id="peopleCount" disabled placeholder="人数を記入してください">
+                </div>
+            </div>
+            <div class="reservationform-row">
+                <span class="reservationform-required">必須</span>
+                <label class="reservationform-label">日付</label>
+                <input type="date" class="reservationform-input" required>
+            </div>
+            <div class="reservationform-row">
+                <span class="reservationform-required">必須</span>
+                <label class="reservationform-label">時間</label>
+                <input type="time" class="reservationform-input" required>
+            </div>
+            <div class="reservationform-row">
+                <span class="reservationform-required">必須</span>
+                <label class="reservationform-label">お名前</label>
+                <input type="text" class="reservationform-input" placeholder="山田 一郎" required>
+            </div>
+            <div class="reservationform-row">
+                <span class="reservationform-required">必須</span>
+                <label class="reservationform-label">電話番号</label>
+                <input type="tel" class="reservationform-input" placeholder="09000000000" required>
+            </div>
+            <div class="reservationform-row reservationform-row-textarea">
+                <span></span>
+                <label class="reservationform-label">特記事項</label>
+                <textarea class="reservationform-textarea"></textarea>
+            </div>
+            <button type="submit" class="reservationform-btn">席を予約する</button>
+        </form>
+        
+    </section><!-- /.reservationform -->
+
+    <footer class="footer">
+        <small class="copyright">&copy; 2025 Cafea Design by TemplatesJungle</small>
+    </footer><!-- /.footer -->
+</body>
+</html>
