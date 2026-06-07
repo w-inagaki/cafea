@@ -21,36 +21,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header" id="header">
-        <div class="pc-header">
+    <header id="header" class="header">
+        <div class="hamburger">
             <div class="header-logo">Cafea</div><!-- /.header-logo -->
-            <nav class="pc-nav">
-                <ul class="pc-nav-ul">
-                    <li class="pc-nav-list"><a href="#">HOME</a></li>
-                    <li class="pc-nav-list"><a href="#about">ABOUT</a></li>
-                    <li class="pc-nav-list"><a href="#menu">MENU</a></li>
-                    <li class="pc-nav-list"><a href="#reservation">RESERVATION</a></li>
-                    <li class="pc-nav-list"><a href="#access">ACCESS</a></li>
-                </ul><!-- /.pc-nav-ul -->
-            </nav><!-- /.pc-nav -->
-        </div><!-- /.pc-header -->
-
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div><!-- /.humburger -->
-        <div class="sp-nav">
-            <ul class="sp-nav-ul">
-                <li class="sp-nav-list"><a href="#">HOME</a></li>
-                <li class="sp-nav-list"><a href="#">ABOUT</a></li>
-                <li class="sp-nav-list"><a href="#">MENU</a></li>
-                <li class="sp-nav-list"><a href="#">RESERVATION</a></li>
-                <li class="sp-nav-list"><a href="#">NEWS</a></li>
-                <li class="sp-nav-list"><a href="#">ACCESS</a></li>
-            </ul><!-- /.sp-nav-ul -->
-        </div><!-- /.sp-nav -->
-    </header><!-- /.header -->
+            <p class="btn-gNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </p>
+            <nav class="gNav">
+                <ul class="header-nav">
+                    <li class="header-nav-list"><a href="#">HOME</a></li>
+                    <li class="header-nav-list"><a href="#about">ABOUT</a></li>
+                    <li class="header-nav-list"><a href="#menu">MENU</a></li>
+                    <li class="header-nav-list"><a href="#reservation">RESERVATION</a></li>
+                    <li class="header-nav-list"><a href="#access">ACCESS</a></li>
+                </ul><!-- /.header-nav -->
+            </nav>
+        </div><!-- /.hamburger -->
+    </header><!-- /#header .header -->
 
     <section class="top" id="top">
         <img src="./images/mainvisual-pc.jpg" alt="Cafeaの内装写真" class="mainvisual-pc">
@@ -118,7 +107,7 @@
         <div class="photo-slider">
             <div class="photo-box active">
                 <img src="./images/coffee-series.jpg" alt="コーヒーの写真" class="photo-box-img">
-                <h3 class="photo-box-ttl">COFFEE SLECTION</h3>
+                <h3 class="photo-box-ttl">COFFEE SELECTION</h3>
             </div><!-- /.photo-box -->
             <div class="photo-box">
                 <img src="./images/tea-series.jpg" alt="紅茶の写真" class="photo-box-img">
@@ -271,8 +260,9 @@
     <section class="access" id="access">
         <h2 class="access-ttl">ACCESS</h2>
         <div class="access-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26000.69803163648!2d139.62538361549377!3d35.452634235938525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185cf885807149%3A0x94947dd82acc3d73!2z5qiq5rWc6LWk44Os44Oz44Ks5YCJ5bqr!5e0!3m2!1sja!2sjp!4v1748576659555!5m2!1sja!2sjp" width="600" height="450" style="border:0; margin-right: calc(50% - 50vw); margin-left: calc(50% - 50vw); max-width: none; width: 100vw" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13000.746488414325!2d139.62861112296304!3d35.45017398419815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185c58a0692f65%3A0xb2a061a8d96cddf9!2z6aas6LuK6YGT6aeF!5e0!3m2!1sja!2sjp!4v1780800947612!5m2!1sja!2sjp" width="600" height="450" style="border:0; margin-right: calc(50% - 50vw); margin-left: calc(50% - 50vw); max-width: none; width: 100vw" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div><!-- /.access-map -->
+        <small class="access-attention">※当サイトはポートフォリオ用に制作した架空サイトです。<br class="sp-br">掲載している店舗情報・住所はすべて架空のものです。</small><!-- /.access-attention -->
         <div class="access-txt">
             <p class="access-txt-info">神奈川県横浜市○○区○○　00-000</p>
             <p class="access-txt-info">JR○○駅から徒歩10分<br>○○線○○駅から徒歩15分</p>

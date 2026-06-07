@@ -1,4 +1,16 @@
+// ハンバーガーメニュー
+// ==================================================
+const btnGNav = document.querySelector(".btn-gNav");
+const gNav = document.querySelector(".gNav");
+
+btnGNav.addEventListener("click", () => {
+  btnGNav.classList.toggle("open");
+  gNav.classList.toggle("open");
+});
+
+
 // 画像3枚フェード
+// ==================================================
 function initMenuSlider() {
     const boxes = document.querySelectorAll('.photo-box');
     const slider = document.querySelector('.photo-slider');
@@ -25,6 +37,7 @@ function initMenuSlider() {
 
 
 // メニュートグル
+// ==================================================
 function initMenuToggle() {
     const toggles = document.querySelectorAll('.menu-toggle');
     
@@ -45,6 +58,7 @@ function initMenuToggle() {
 
 
 // トグル・フェード共通
+// ==================================================
 function handleResponsiveScript() {
     if (window.innerWidth <= 768 && !window.sliderInitialized) {
         initMenuSlider();
