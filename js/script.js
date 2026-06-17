@@ -8,6 +8,15 @@ btnGNav.addEventListener("click", () => {
   gNav.classList.toggle("open");
 });
 
+// メニュークリックで閉じる
+const gNavLinks = document.querySelectorAll(".gNav a");
+
+gNavLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    btnGNav.classList.remove("open");
+    gNav.classList.remove("open");
+  });
+});
 
 // 画像3枚フェード
 // ==================================================
